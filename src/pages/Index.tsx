@@ -5,18 +5,21 @@ import MixcloudPlayer from "@/components/MixcloudPlayer";
 import About from "@/components/About";
 import DemoBanner from "@/components/DemoBanner";
 import NowPlaying from "@/components/NowPlaying";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background pb-20">
-      <Header />
-      <Hero />
-      <Schedule />
-      <MixcloudPlayer />
-      <About />
-      <DemoBanner />
-      <NowPlaying />
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen bg-background pb-20">
+        <Header />
+        <Hero />
+        <Schedule />
+        <MixcloudPlayer />
+        <About />
+        <DemoBanner />
+        <NowPlaying />
+      </div>
+    </LanguageProvider>
   );
 };
 

@@ -1,6 +1,9 @@
 import djPortrait from "@/assets/dj-portrait.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   const scrollToSchedule = () => {
     document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -15,7 +18,7 @@ const Hero = () => {
       <div className="mb-8 animate-pulse-glow">
         <div className="flex items-center gap-2 px-6 py-2 rounded-lg border-2 border-secondary neon-border-magenta bg-background/50">
           <span className="w-3 h-3 bg-secondary rounded-full animate-pulse" />
-          <span className="font-display font-semibold text-secondary uppercase tracking-wider">On Air</span>
+          <span className="font-display font-semibold text-secondary uppercase tracking-wider">{t.onAir}</span>
         </div>
       </div>
 
@@ -39,13 +42,13 @@ const Hero = () => {
 
       {/* Tagline */}
       <p className="text-xl md:text-2xl text-muted-foreground mb-2">
-        Your Gateway to the <span className="neon-text-cyan">80s</span> & <span className="neon-text-magenta">90s</span>
+        {t.tagline} <span className="neon-text-cyan">80s</span> & <span className="neon-text-magenta">90s</span>
       </p>
 
       {/* Radio Vibes */}
       <div className="flex items-center gap-3 text-primary mb-8">
         <span className="text-lg animate-wave-pulse">((•))</span>
-        <span className="font-display text-sm tracking-[0.3em] uppercase">Retro Radio Vibes</span>
+        <span className="font-display text-sm tracking-[0.3em] uppercase">{t.radioVibes}</span>
         <span className="text-lg animate-wave-pulse">((•))</span>
       </div>
 
@@ -54,7 +57,7 @@ const Hero = () => {
         onClick={scrollToSchedule}
         className="px-8 py-3 font-display font-semibold text-foreground border-2 border-primary rounded-lg neon-border-cyan hover:bg-primary hover:text-primary-foreground transition-all duration-300 uppercase tracking-wider"
       >
-        View Schedule
+        {t.viewSchedule}
       </button>
     </section>
   );
