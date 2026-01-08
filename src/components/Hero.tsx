@@ -1,6 +1,10 @@
 import djPortrait from "@/assets/dj-portrait.jpg";
 
 const Hero = () => {
+  const scrollToSchedule = () => {
+    document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-10 overflow-hidden">
       {/* Background gradient orbs */}
@@ -20,7 +24,7 @@ const Hero = () => {
         <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 neon-border-magenta">
           <img 
             src={djPortrait} 
-            alt="DJ Adolfo" 
+            alt="DJ Namn" 
             className="w-full h-full object-cover"
           />
         </div>
@@ -28,9 +32,9 @@ const Hero = () => {
         <div className="absolute inset-0 -z-10 w-56 h-56 md:w-72 md:h-72 rounded-full bg-gradient-to-r from-primary via-secondary to-accent blur-xl opacity-50" />
       </div>
 
-      {/* DJ Name */}
+      {/* DJ Name - Placeholder */}
       <h1 className="font-display text-5xl md:text-7xl font-bold mb-4 gradient-text">
-        DJ ADOLFO
+        DITT NAMN
       </h1>
 
       {/* Tagline */}
@@ -46,7 +50,10 @@ const Hero = () => {
       </div>
 
       {/* CTA Button */}
-      <button className="px-8 py-3 font-display font-semibold text-foreground border-2 border-primary rounded-lg neon-border-cyan hover:bg-primary hover:text-primary-foreground transition-all duration-300 uppercase tracking-wider">
+      <button 
+        onClick={scrollToSchedule}
+        className="px-8 py-3 font-display font-semibold text-foreground border-2 border-primary rounded-lg neon-border-cyan hover:bg-primary hover:text-primary-foreground transition-all duration-300 uppercase tracking-wider"
+      >
         View Schedule
       </button>
     </section>
