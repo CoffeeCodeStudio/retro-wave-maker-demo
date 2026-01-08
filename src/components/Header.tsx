@@ -6,11 +6,10 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Radio className="w-5 h-5 text-primary" />
-          <span className="font-display font-bold text-lg neon-text-cyan">DJ LOBO RADIO</span>
+          <span className="font-display font-bold text-lg neon-text-cyan">RETRO RADIO</span>
         </div>
-        <div className="flex items-center gap-2 text-muted-foreground text-sm">
-          <span className="hidden sm:inline">🌍</span>
-          <span>Svenska</span>
+        <div className="px-3 py-1 bg-secondary/20 border border-secondary rounded-full text-secondary text-xs font-display uppercase tracking-wider">
+          Demo
         </div>
       </div>
     </header>

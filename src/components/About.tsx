@@ -17,15 +17,15 @@ const About = () => {
     <section className="py-20 relative">
       <div className="container mx-auto px-6">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-8 gradient-text">
-          OM DJ ADOLFO
+          OM ARTISTEN
         </h2>
         
         <div className="max-w-3xl mx-auto text-center mb-12">
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Med över 20 års erfarenhet av att spinna de bästa låtarna från 80- och 90-talet har DJ Adolfo blivit en legend inom retro-musikscenen.
+            Med över 20 års erfarenhet av att spinna de bästa låtarna från 80- och 90-talet har du blivit en legend inom retro-musikscenen.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Hans passion för denna gyllene era av musik är smittsam och tar varje lyssnare på en nostalgisk resa genom tidernas mest minnesvärda låtar.
+            Din passion för denna gyllene era av musik är smittsam och tar varje lyssnare på en nostalgisk resa genom tidernas mest minnesvärda låtar.
           </p>
         </div>
 

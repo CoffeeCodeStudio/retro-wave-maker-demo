@@ -11,7 +11,7 @@ const scheduleData = [
 
 const Schedule = () => {
   return (
-    <section className="py-20 relative">
+    <section id="schedule" className="py-20 relative">
       <div className="container mx-auto px-6">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">
           KOMMANDE DJ SETS
