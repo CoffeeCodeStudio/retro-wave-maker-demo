@@ -46,10 +46,10 @@ const DemoBanner = () => {
           </div>
           
           <a 
-            href="mailto:din@email.com"
+            href="mailto:rami.elsaneh@protonmail.com"
             className="inline-block px-8 py-3 font-display font-semibold bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-all duration-300 uppercase tracking-wider"
           >
-            Kontakta mig
+            Kontakta Rami
           </a>
         </div>
       </div>
