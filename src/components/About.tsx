@@ -1,31 +1,34 @@
 import { Music, Radio, Users } from "lucide-react";
-
-const stats = [
-  { value: "20+", label: "År", icon: null },
-  { value: "5K+", label: "Vinyl", icon: null },
-  { value: "100K+", label: "Lyssnare", icon: null },
-];
-
-const features = [
-  { title: "80s Hits", description: "Synth-pop, rock och disco-klassiker", icon: Music },
-  { title: "90s Favoriter", description: "Eurodance, grunge och R&B", icon: Radio },
-  { title: "Live Varje Vecka", description: "Fräscha mixar och specialshower", icon: Users },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
+
+  const stats = [
+    { value: "20+", label: t.years },
+    { value: "5K+", label: t.vinyl },
+    { value: "100K+", label: t.listeners },
+  ];
+
+  const features = [
+    { title: t.feature1Title, description: t.feature1Desc, icon: Music },
+    { title: t.feature2Title, description: t.feature2Desc, icon: Radio },
+    { title: t.feature3Title, description: t.feature3Desc, icon: Users },
+  ];
+
   return (
     <section className="py-20 relative">
       <div className="container mx-auto px-6">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-8 gradient-text">
-          OM ARTISTEN
+          {t.aboutArtist}
         </h2>
         
         <div className="max-w-3xl mx-auto text-center mb-12">
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Med över 20 års erfarenhet av att spinna de bästa låtarna från 80- och 90-talet har du blivit en legend inom retro-musikscenen.
+            {t.aboutText1}
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Din passion för denna gyllene era av musik är smittsam och tar varje lyssnare på en nostalgisk resa genom tidernas mest minnesvärda låtar.
+            {t.aboutText2}
           </p>
         </div>
 
