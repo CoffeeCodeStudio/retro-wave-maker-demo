@@ -29,6 +29,9 @@ const Hero = () => {
             src={djPortrait} 
             alt="DJ Namn" 
             className="w-full h-full object-cover"
+            width={288}
+            height={288}
+            fetchPriority="high"
           />
         </div>
         {/* Glow ring behind the image */}
