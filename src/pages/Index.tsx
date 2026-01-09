@@ -5,6 +5,7 @@ import MixcloudPlayer from "@/components/MixcloudPlayer";
 import About from "@/components/About";
 import DemoBanner from "@/components/DemoBanner";
 import NowPlaying from "@/components/NowPlaying";
+import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const Index = () => {
@@ -18,6 +19,7 @@ const Index = () => {
         <About />
         <DemoBanner />
         <NowPlaying />
+        <Footer />
       </div>
     </LanguageProvider>
   );
