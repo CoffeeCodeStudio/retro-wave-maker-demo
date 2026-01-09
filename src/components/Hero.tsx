@@ -1,5 +1,4 @@
 import djPortrait from "@/assets/dj-portrait.jpg";
-import demoVideo from "@/assets/demo-video.mp4";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
@@ -11,16 +10,6 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-10 overflow-hidden">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-30 -z-20"
-      >
-        <source src={demoVideo} type="video/mp4" />
-      </video>
       
       {/* Background gradient orbs */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-purple-orb rounded-full blur-3xl opacity-50" />
