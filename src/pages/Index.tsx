@@ -4,6 +4,7 @@ import Schedule from "@/components/Schedule";
 import MixcloudPlayer from "@/components/MixcloudPlayer";
 import About from "@/components/About";
 import DemoBanner from "@/components/DemoBanner";
+import Contact from "@/components/Contact";
 import NowPlaying from "@/components/NowPlaying";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -18,6 +19,7 @@ const Index = () => {
         <MixcloudPlayer />
         <About />
         <DemoBanner />
+        <Contact />
         <NowPlaying />
         <Footer />
       </div>
