@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/retro-wave-maker-demo/',
+  base: mode === 'production' ? '/retro-wave-maker-demo/' : './',
   server: {
     host: "::",
     port: 8080,
