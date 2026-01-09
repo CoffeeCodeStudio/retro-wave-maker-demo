@@ -1,8 +1,16 @@
-import { Sparkles, Check } from "lucide-react";
+import { useState } from "react";
+import { Sparkles, Check, Send } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 const DemoBanner = () => {
   const { t } = useLanguage();
+  const { toast } = useToast();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const features = [
     t.customColors,
@@ -12,6 +20,32 @@ const DemoBanner = () => {
     t.responsiveDesign,
     t.seoOptimized,
   ];
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!name.trim() || !email.trim()) {
+      toast({
+        title: "Fyll i alla fält",
+        description: "Både namn och e-post krävs.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    // Open email client with pre-filled info
+    const subject = encodeURIComponent(`Kontaktförfrågan från ${name}`);
+    const body = encodeURIComponent(`Hej Rami!\n\nMitt namn är ${name} och jag är intresserad av att veta mer.\n\nDu kan nå mig på: ${email}\n\nMvh,\n${name}`);
+    window.location.href = `mailto:rami.elsaneh@protonmail.com?subject=${subject}&body=${body}`;
+    
+    setIsSubmitting(false);
+    toast({
+      title: "E-postklient öppnad!",
+      description: "Skicka meddelandet för att kontakta Rami.",
+    });
+  };
 
   return (
     <section className="py-20 relative">
@@ -39,12 +73,32 @@ const DemoBanner = () => {
             ))}
           </div>
           
-          <a 
-            href="mailto:rami.elsaneh@protonmail.com"
-            className="inline-block px-8 py-3 font-display font-semibold bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-all duration-300 uppercase tracking-wider"
-          >
-            {t.contactRami}
-          </a>
+          <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
+            <Input
+              type="text"
+              placeholder="Ditt namn"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="bg-background/50 border-primary/30 text-foreground placeholder:text-muted-foreground"
+              maxLength={100}
+            />
+            <Input
+              type="email"
+              placeholder="Din e-postadress"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="bg-background/50 border-primary/30 text-foreground placeholder:text-muted-foreground"
+              maxLength={255}
+            />
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full font-display font-semibold bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 uppercase tracking-wider"
+            >
+              <Send className="w-4 h-4 mr-2" />
+              {t.contactRami}
+            </Button>
+          </form>
         </div>
       </div>
     </section>
