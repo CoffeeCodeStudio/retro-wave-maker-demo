@@ -14,9 +14,9 @@ const MixcloudPlayer = () => {
             <iframe 
               width="100%" 
               height="180" 
-              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FDjLobo75%2F" 
+              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&autoplay=1&feed=%2FDjLobo75%2F" 
               frameBorder="0"
-              loading="lazy"
+              allow="autoplay"
               className="rounded-lg"
               title="Mixcloud Player"
             />
