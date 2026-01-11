@@ -41,7 +41,7 @@ const Hero = () => {
 
       {/* DJ Name - Placeholder */}
       <h1 className="font-display text-5xl md:text-7xl font-bold mb-4 gradient-text">
-        DITT NAMN
+        SYNTH ARTIST
       </h1>
 
       {/* Tagline */}

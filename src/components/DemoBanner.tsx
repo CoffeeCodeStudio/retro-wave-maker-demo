@@ -16,7 +16,7 @@ const DemoBanner = () => {
     t.customColors,
     t.yourPhoto,
     t.yourSchedule,
-    t.mixcloudIntegration,
+    t.streamIntegration,
     t.responsiveDesign,
     t.seoOptimized,
   ];
