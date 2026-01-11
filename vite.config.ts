@@ -5,7 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/retro-wave-maker-demo/' : './',
+  // Lovable hosting expects assets from root (/). GitHub Pages sets base via build flag in workflow.
+  base: "/",
   server: {
     host: "::",
     port: 8080,
