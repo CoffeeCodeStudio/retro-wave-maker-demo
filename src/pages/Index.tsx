@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Schedule from "@/components/Schedule";
-import MixcloudPlayer from "@/components/MixcloudPlayer";
+import RecentBuilds from "@/components/RecentBuilds";
 import About from "@/components/About";
 import DemoBanner from "@/components/DemoBanner";
 import Contact from "@/components/Contact";
@@ -16,7 +16,7 @@ const Index = () => {
         <Header />
         <Hero />
         <Schedule />
-        <MixcloudPlayer />
+        <RecentBuilds />
         <About />
         <DemoBanner />
         <Contact />

@@ -42,7 +42,7 @@ interface Translations {
   customColors: string;
   yourPhoto: string;
   yourSchedule: string;
-  mixcloudIntegration: string;
+  streamIntegration: string;
   responsiveDesign: string;
   seoOptimized: string;
   contactRami: string;
@@ -50,6 +50,13 @@ interface Translations {
   // Now Playing
   nowPlaying: string;
   listenLive: string;
+
+  // Recent Builds
+  recentBuilds: string;
+  recentBuildsSub: string;
+  build1Desc: string;
+  build2Desc: string;
+  build3Desc: string;
 }
 
 const translations: Record<Language, Translations> = {
@@ -84,12 +91,17 @@ const translations: Record<Language, Translations> = {
     customColors: "Anpassade färger",
     yourPhoto: "Din egen profilbild",
     yourSchedule: "Ditt eget schema",
-    mixcloudIntegration: "Mixcloud-integration",
+    streamIntegration: "Stream-integration",
     responsiveDesign: "Responsiv design",
     seoOptimized: "SEO-optimerad",
     contactRami: "Kontakta Rami",
     nowPlaying: "Nu Spelas",
     listenLive: "Lyssna Live",
+    recentBuilds: "SENASTE PROJEKT",
+    recentBuildsSub: "Exempel på vad Coffee Code Studio kan bygga åt dig",
+    build1Desc: "Komplett retro-inspirerad landningssida med neon-estetik",
+    build2Desc: "Interaktiv dashboard med synthwave-tema och animationer",
+    build3Desc: "Modern portfölj med 80-tals vibbar och responsiv design",
   },
   en: {
     demo: "Demo",
@@ -122,12 +134,17 @@ const translations: Record<Language, Translations> = {
     customColors: "Custom colors",
     yourPhoto: "Your own profile picture",
     yourSchedule: "Your own schedule",
-    mixcloudIntegration: "Mixcloud integration",
+    streamIntegration: "Stream integration",
     responsiveDesign: "Responsive design",
     seoOptimized: "SEO optimized",
     contactRami: "Contact Rami",
     nowPlaying: "Now Playing",
     listenLive: "Listen Live",
+    recentBuilds: "RECENT BUILDS",
+    recentBuildsSub: "Examples of what Coffee Code Studio can build for you",
+    build1Desc: "Complete retro-inspired landing page with neon aesthetics",
+    build2Desc: "Interactive dashboard with synthwave theme and animations",
+    build3Desc: "Modern portfolio with 80s vibes and responsive design",
   },
   es: {
     demo: "Demo",
@@ -160,12 +177,17 @@ const translations: Record<Language, Translations> = {
     customColors: "Colores personalizados",
     yourPhoto: "Tu propia foto de perfil",
     yourSchedule: "Tu propio horario",
-    mixcloudIntegration: "Integración con Mixcloud",
+    streamIntegration: "Integración de streaming",
     responsiveDesign: "Diseño responsivo",
     seoOptimized: "Optimizado para SEO",
     contactRami: "Contactar a Rami",
     nowPlaying: "Reproduciendo Ahora",
     listenLive: "Escuchar en Vivo",
+    recentBuilds: "PROYECTOS RECIENTES",
+    recentBuildsSub: "Ejemplos de lo que Coffee Code Studio puede construir para ti",
+    build1Desc: "Página de destino completa con estética neón retro",
+    build2Desc: "Dashboard interactivo con tema synthwave y animaciones",
+    build3Desc: "Portafolio moderno con vibras de los 80 y diseño responsivo",
   },
 };
 
